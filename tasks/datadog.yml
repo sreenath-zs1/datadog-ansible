@@ -1,6 +1,6 @@
 - hosts: servers
-  roles:
-    - { role: datadog.datadog, become: yes }
+  # roles:
+  #   - { role: datadog.datadog, become: yes }
   vars_files:
     - secret.yml
   vars:
