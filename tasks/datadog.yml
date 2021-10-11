@@ -1,7 +1,7 @@
 - name: Install Datadog Agent on servers in AWS
   hosts: tag_datadog_yes
   become: yes
-  user: centos  #Use the default login for the AWS image. Here we are using a Centos image.
+  user: ubuntu  #Use the default login for the AWS image. Here we are using a Centos image.
   roles:
     - { role: Datadog.datadog, become: yes }
   vars:
