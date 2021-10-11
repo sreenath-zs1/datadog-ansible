@@ -1,6 +1,6 @@
 - hosts: servers
-  # roles:
-  #   - { role: datadog.datadog, become: yes }
+  roles:
+    - { role: datadog.datadog, become: yes }
   vars_files:
     - secret.yml
   vars:
@@ -17,3 +17,6 @@
             cpu_check_interval: 0.2
             exact_match: true
             ignore_denied_access: true
+
+
+         # ansible-galaxy install --force datadog.datadog   
