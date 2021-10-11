@@ -1,4 +1,5 @@
-- hosts: servers
+- name: DataDog Installation
+  hosts: servers
   roles:
     - { role: datadog.datadog, become: yes }
   vars_files:
