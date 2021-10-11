@@ -5,7 +5,7 @@
   roles:
     - { role: Datadog.datadog, become: yes }
   vars_files:
-   - secret.yml
+    - secret.yml
   vars:
     datadog_api_key: "{{ datadog_api_key }}"
     datadog_config:
