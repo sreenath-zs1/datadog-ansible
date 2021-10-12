@@ -3,8 +3,8 @@
   become: yes
   roles:
     - role: datadog-agent
-      vars_files:
-        - secret2.yml
-      vars:
-        DD_API_KEY: "{{ DD_API_KEY }}"
+      # vars_files:
+      #   - secret2.yml
+      # vars:
+      #   DD_API_KEY: "{{ DD_API_KEY }}"
        #DD_API_KEY: 6deed75853e98c21d4bb5590bd608b0c

@@ -2,7 +2,11 @@
   apt:
    update_cache: yes
 
-- name: Import Datadog
-  include_role:
-    name: common
-    tasks_from: datadog-agent
+- name: Amazon-Linux-Agent-API-KEY
+  shell: DD_AGENT_MAJOR_VERSION=7 DD_API_KEY="{{ DD_API_KEY }}" DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
+  
+- name: Restart Datadog-agent Service
+  systemd:
+    name: datadog-agent
+    state: restarted
+    enabled: yes
