@@ -1,5 +1,0 @@
-- name: Restart Datadog-agent Service
-  systemd:
-    name: datadog-agent
-    state: restarted
-    enabled: yes
