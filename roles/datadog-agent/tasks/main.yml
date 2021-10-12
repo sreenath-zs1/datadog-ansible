@@ -1,3 +1,7 @@
+-name: Update cache
+ apt:
+  update_cache: yes
+  
 - name: Import Datadog
   include_role:
     name: common
